@@ -1,0 +1,977 @@
+/* ==========================================================================
+   AVM Folder Notes Styles (Ave Maria standard)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Folder Notes: Стили подсветки
+   -------------------------------------------------------------------------- */
+.nav-folder-title.fn-style-accent-dot.has-avm-folder-note .nav-folder-title-content::after {
+	content: '';
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	margin-left: 6px;
+	border-radius: var(--avm-badge-radius, 4px);
+	background-color: var(--interactive-accent, #bb9f6f);
+	opacity: 0.9;
+	vertical-align: middle;
+}
+
+.nav-folder-title.fn-style-accent-text.has-avm-folder-note .nav-folder-title-content {
+	color: var(--interactive-accent, #bb9f6f) !important;
+	font-weight: 500;
+}
+
+.nav-folder-title.fn-style-accent-badge.has-avm-folder-note .nav-folder-title-content::after {
+	content: 'DOC';
+	display: inline-block;
+	font-size: 9px;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	padding: 1px 4px;
+	margin-left: 6px;
+	border-radius: var(--avm-badge-radius, 4px);
+	background-color: rgba(187, 159, 111, 0.15);
+	color: var(--interactive-accent, #bb9f6f);
+	vertical-align: middle;
+	line-height: 1.1;
+}
+
+.nav-folder-title.fn-style-accent-underline.has-avm-folder-note .nav-folder-title-content {
+	border-bottom: 1px solid var(--interactive-accent, #bb9f6f);
+	padding-bottom: 1px;
+}
+
+/* --------------------------------------------------------------------------
+   Iconic Engine: Интеграция SVG-иконок в DOM Obsidian
+   -------------------------------------------------------------------------- */
+.avm-file-icon,
+.avm-bookmark-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+	margin-right: 6px;
+	flex-shrink: 0;
+	vertical-align: middle;
+	color: var(--text-muted);
+}
+
+.avm-file-icon svg,
+.avm-bookmark-icon svg {
+	width: 16px;
+	height: 16px;
+	stroke-width: 1.75px;
+}
+
+.nav-folder-title:hover .avm-file-icon,
+.nav-file-title:hover .avm-file-icon,
+.tree-item-self:hover .avm-bookmark-icon {
+	color: var(--interactive-accent, #bb9f6f);
+}
+
+.avm-tab-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 16px;
+	height: 16px;
+	margin-right: 6px;
+	flex-shrink: 0;
+	color: var(--text-muted);
+}
+
+.avm-tab-icon svg {
+	width: 14px;
+	height: 14px;
+	stroke-width: 1.75px;
+}
+
+.workspace-tab-header.is-active .avm-tab-icon {
+	color: var(--interactive-accent, #bb9f6f);
+}
+
+.avm-inline-title-icon {
+	display: inline-flex;
+	align-items: center;
+	margin-right: 10px;
+	color: var(--interactive-accent, #bb9f6f);
+	vertical-align: middle;
+}
+
+.avm-inline-title-icon svg {
+	width: 24px;
+	height: 24px;
+	stroke-width: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Модальное окно выбора иконок (Icon Picker)
+   -------------------------------------------------------------------------- */
+.avm-icon-picker-modal .suggestion-item {
+	padding: 8px 12px;
+}
+
+.avm-icon-suggestion-item {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.avm-suggestion-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	color: var(--interactive-accent, #bb9f6f);
+	flex-shrink: 0;
+}
+
+.avm-suggestion-icon svg {
+	width: 18px;
+	height: 18px;
+}
+
+.avm-suggestion-info {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-grow: 1;
+}
+
+.avm-suggestion-name {
+	font-size: 0.9rem;
+	color: var(--text-normal);
+}
+
+.avm-suggestion-badge {
+	font-size: 0.72rem;
+	padding: 1px 5px;
+	border-radius: var(--avm-badge-radius, 4px);
+	background-color: rgba(187, 159, 111, 0.15);
+	color: var(--interactive-accent, #bb9f6f);
+	letter-spacing: 0.03em;
+}
+
+/* --------------------------------------------------------------------------
+   Настройки плагина: точная копия CSS из AVM File Extensions
+   -------------------------------------------------------------------------- */
+.avm-settings-container {
+	padding-bottom: 24px;
+}
+
+.avm-set-header {
+	margin-bottom: 20px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.avm-set-header h2 {
+	margin: 0 0 6px 0;
+	color: var(--text-normal);
+	font-size: 1.25rem;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+}
+
+.avm-set-actions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin: 14px 0 24px 0;
+	flex-wrap: wrap;
+}
+
+.avm-actions-left {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.avm-actions-right {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.avm-lang-label {
+	font-size: 12px;
+	color: var(--text-muted);
+	font-weight: 500;
+}
+
+.avm-lang-select {
+	height: 32px;
+	padding: 0 28px 0 10px;
+	border-radius: var(--avm-ctl-radius, 8px);
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-secondary);
+	color: var(--text-normal);
+	font-size: 12px;
+	font-weight: 500;
+	cursor: pointer;
+	outline: none;
+	transition: all 0.15s ease;
+}
+
+.avm-lang-select:hover {
+	border-color: var(--background-modifier-border-hover);
+	background: var(--background-modifier-hover);
+}
+
+.avm-lang-select:focus {
+	border-color: var(--interactive-accent, #bb9f6f);
+}
+
+.avm-action-btn {
+	height: 32px;
+	padding: 0 14px;
+	border-radius: var(--avm-ctl-radius, 8px);
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-secondary);
+	color: var(--text-normal);
+	font-size: 12px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.15s ease;
+	outline: none;
+}
+
+.avm-action-btn:hover {
+	background: var(--background-modifier-hover);
+	border-color: var(--background-modifier-border-hover);
+}
+
+.avm-action-btn--cta {
+	background: var(--interactive-accent, #bb9f6f);
+	border-color: var(--interactive-accent, #bb9f6f);
+	color: var(--text-on-accent, #1e1e20);
+	font-weight: 600;
+}
+
+.avm-action-btn--cta:hover {
+	opacity: 0.92;
+	background: var(--interactive-accent, #bb9f6f);
+	border-color: var(--interactive-accent, #bb9f6f);
+}
+
+.avm-section-heading {
+	margin: 26px 0 10px 0;
+	font-size: 0.95rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--interactive-accent, #bb9f6f);
+}
+
+.avm-settings-container .setting-item {
+	padding: 14px 0;
+	border-top: none;
+	border-bottom: 1px solid var(--background-modifier-border);
+	background: transparent;
+	border-radius: 0;
+}
+
+.avm-settings-container .setting-item-name {
+	font-weight: 500;
+	color: var(--text-normal);
+}
+
+.avm-settings-container .setting-item-description {
+	font-size: 0.84rem;
+	color: var(--text-muted);
+	margin-top: 4px;
+	line-height: 1.4;
+}
+
+.avm-settings-container .setting-item-control select.dropdown,
+.avm-settings-container .setting-item-control input[type="text"] {
+	border-radius: var(--avm-ctl-radius, 8px);
+	border: 1px solid var(--background-modifier-border);
+	background-color: var(--background-secondary);
+	padding: 5px 12px;
+	font-size: 0.85rem;
+	color: var(--text-normal);
+}
+
+.avm-settings-container .setting-item-control select.dropdown:focus,
+.avm-settings-container .setting-item-control input[type="text"]:focus {
+	border-color: var(--interactive-accent, #bb9f6f);
+	box-shadow: none;
+}
+
+/* Блок загрузки SVG файлов */
+.avm-hidden-file-input {
+	display: none;
+}
+
+.avm-upload-action-row {
+	margin: 14px 0 16px 0;
+}
+
+/* Галерея загруженных SVG пиллсов */
+.avm-svg-gallery-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	padding: 12px 14px;
+	background-color: var(--background-secondary);
+	border-radius: var(--avm-card-radius, 8px);
+	border: 1px solid var(--background-modifier-border);
+	max-height: 220px;
+	overflow-y: auto;
+}
+
+.avm-gallery-empty-notice {
+	font-size: 0.84rem;
+	color: var(--text-muted);
+	padding: 10px 0;
+}
+
+.avm-svg-gallery-pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 4px 10px;
+	border-radius: 6px !important;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--background-primary);
+	font-size: 11px;
+	font-family: var(--font-monospace);
+	color: var(--text-normal);
+}
+
+.avm-gallery-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 14px;
+	height: 14px;
+	color: var(--interactive-accent, #bb9f6f);
+}
+
+.avm-gallery-icon svg {
+	width: 14px;
+	height: 14px;
+}
+
+.avm-gallery-name {
+	line-height: 1;
+}
+
+.avm-gallery-delete-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 14px;
+	height: 14px;
+	margin-left: 2px;
+	border-radius: 50%;
+	font-size: 13px;
+	line-height: 1;
+	color: var(--text-muted);
+	cursor: pointer;
+	transition: all 0.12s ease;
+}
+
+.avm-gallery-delete-btn:hover {
+	background-color: rgba(255, 255, 255, 0.15);
+	color: var(--text-normal);
+}
+
+/* Блок предпросмотра стилей в настройках */
+.avm-preview-card {
+	margin: 16px 0 20px 0;
+	padding: 14px 18px;
+	background-color: var(--background-secondary);
+	border-radius: var(--avm-card-radius, 8px);
+	border: 1px solid var(--background-modifier-border);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.avm-preview-label {
+	font-size: 0.85rem;
+	color: var(--text-muted);
+}
+
+.avm-preview-box {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 12px;
+	background-color: var(--background-primary);
+	border-radius: var(--avm-ctl-radius, 8px);
+	border: 1px solid var(--background-modifier-border);
+}
+
+.avm-preview-icon {
+	color: var(--text-muted);
+	display: flex;
+	align-items: center;
+}
+
+.avm-preview-text {
+	font-size: 0.9rem;
+	user-select: none;
+	display: inline-block;
+}
+
+.avm-preview-box.preview-style-accent-dot .avm-preview-text::after {
+	content: '';
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	margin-left: 6px;
+	border-radius: var(--avm-badge-radius, 4px);
+	background-color: var(--interactive-accent, #bb9f6f);
+	opacity: 0.9;
+	vertical-align: middle;
+}
+
+.avm-preview-box.preview-style-accent-text .avm-preview-text {
+	color: var(--interactive-accent, #bb9f6f);
+	font-weight: 500;
+}
+
+.avm-preview-box.preview-style-accent-badge .avm-preview-text::after {
+	content: 'DOC';
+	display: inline-block;
+	font-size: 9px;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	padding: 1px 4px;
+	margin-left: 6px;
+	border-radius: var(--avm-badge-radius, 4px);
+	background-color: rgba(187, 159, 111, 0.15);
+	color: var(--interactive-accent, #bb9f6f);
+	vertical-align: middle;
+	line-height: 1.1;
+}
+
+.avm-preview-box.preview-style-accent-underline .avm-preview-text {
+	border-bottom: 1px solid var(--interactive-accent, #bb9f6f);
+	padding-bottom: 1px;
+}
+
+
+/* ── Donate Section (Ave Maria standard) ────────── */
+.avm-donate-card {
+	margin-top: 28px;
+	padding: 16px 18px;
+	background: var(--background-secondary);
+	border: 1px solid rgba(187, 159, 111, 0.35);
+	border-radius: var(--avm-card-radius, 8px);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.avm-donate-info {
+	flex: 1 1 280px;
+}
+
+.avm-donate-title {
+	margin: 0 0 6px 0;
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: var(--interactive-accent, #bb9f6f);
+}
+
+.avm-donate-desc {
+	margin: 0;
+	font-size: 0.82rem;
+	color: var(--text-muted);
+	line-height: 1.45;
+}
+
+.avm-btn--donate {
+	height: 34px;
+	padding: 0 16px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none !important;
+	white-space: nowrap;
+}
+
+/* ==========================================================================
+   Ave Maria Ecosystem Plugin Shared Styles
+   Strict adherence to the 7 Iron Rules:
+   1. Zero Emojis & Zero Gradients (monochrome SVGs, solid flat dark shades)
+   2. Unified Radiuses: 8px cards/ctl, 4px badges, 999px pills/switches
+   3. Flat Structure: Anti-nesting, clean spacing (gap: 12-16px, padding: 14-18px)
+   4. Colors: var(--interactive-accent, #bb9f6f) and its alpha layers
+   ========================================================================== */
+
+/* ── Headings Standard (Left aligned, gold accent, uppercase, clean spacing) ── */
+.setting-item.setting-item-heading,
+.avm-section-heading {
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	justify-content: flex-start !important;
+	text-align: left !important;
+	margin: 28px 0 12px 0 !important;
+	padding: 0 0 8px 0 !important;
+	border: none !important;
+	border-bottom: 1px solid var(--background-modifier-border) !important;
+	background: transparent !important;
+	width: 100% !important;
+	box-sizing: border-box !important;
+}
+
+.setting-item.setting-item-heading:first-child,
+.avm-section-heading:first-child {
+	margin-top: 12px !important;
+}
+
+.setting-item.setting-item-heading .setting-item-info,
+.avm-section-heading .setting-item-info {
+	margin: 0 !important;
+	padding: 0 !important;
+	text-align: left !important;
+	flex: 1 1 auto !important;
+}
+
+.setting-item.setting-item-heading .setting-item-name,
+.avm-section-heading .setting-item-name,
+.avm-section-heading {
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 10px !important;
+	color: var(--interactive-accent, #bb9f6f) !important;
+	font-size: 0.82rem !important;
+	font-weight: 700 !important;
+	text-transform: uppercase !important;
+	letter-spacing: 0.08em !important;
+	line-height: 1.3 !important;
+	text-align: left !important;
+	margin: 0 !important;
+}
+
+.setting-item.setting-item-heading .setting-item-name svg,
+.avm-section-heading svg,
+.avm-heading-icon svg {
+	width: 16px !important;
+	height: 16px !important;
+	stroke: var(--interactive-accent, #bb9f6f) !important;
+	stroke-width: 2 !important;
+	flex-shrink: 0 !important;
+	display: inline-block !important;
+	vertical-align: middle !important;
+}
+
+.setting-item.setting-item-heading .setting-item-control,
+.avm-section-heading .setting-item-control {
+	display: none !important;
+}
+
+/* ── Top Hero Banner (Refined proportions, balanced padding, aligned baseline) ── */
+.avm-hero-banner {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 16px 18px;
+	margin-bottom: 20px;
+	background: var(--background-secondary);
+	border: 1px solid rgba(187, 159, 111, 0.25);
+	border-radius: var(--avm-card-radius, 8px);
+	box-sizing: border-box;
+	position: relative;
+}
+
+.avm-hero-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	border-radius: var(--avm-ctl-radius, 8px);
+	background: rgba(187, 159, 111, 0.1);
+	border: 1px solid rgba(187, 159, 111, 0.3);
+	flex-shrink: 0;
+}
+
+.avm-hero-logo svg {
+	width: 22px;
+	height: 22px;
+	stroke: var(--interactive-accent, #bb9f6f);
+	stroke-width: 2;
+	fill: none;
+}
+
+.avm-hero-body {
+	flex: 1 1 auto;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.avm-hero-title-row {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.avm-hero-title {
+	margin: 0;
+	font-size: 1.05rem;
+	font-weight: 600;
+	color: var(--text-normal);
+	line-height: 1.25;
+}
+
+.avm-hero-badge {
+	font-size: 0.68rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	padding: 2px 7px;
+	border-radius: var(--avm-badge-radius, 4px);
+	background: rgba(187, 159, 111, 0.14);
+	color: var(--interactive-accent, #bb9f6f);
+	border: 1px solid rgba(187, 159, 111, 0.28);
+	line-height: 1.2;
+}
+
+.avm-hero-desc {
+	margin: 0;
+	font-size: 0.82rem;
+	color: var(--text-muted);
+	line-height: 1.45;
+}
+
+/* ── Refined Donate Banner (Compact, single-row flex, perfectly balanced) ── */
+.avm-donate-banner {
+	margin-top: 32px;
+	padding: 16px 20px;
+	background: var(--background-secondary);
+	border: 1px solid rgba(187, 159, 111, 0.3);
+	border-radius: var(--avm-card-radius, 8px);
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	flex-wrap: nowrap;
+}
+
+@media (max-width: 720px) {
+	.avm-donate-banner {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 14px;
+	}
+}
+
+.avm-donate-banner-left {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.avm-donate-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: var(--avm-ctl-radius, 8px);
+	background: rgba(187, 159, 111, 0.1);
+	border: 1px solid rgba(187, 159, 111, 0.28);
+	flex-shrink: 0;
+}
+
+.avm-donate-logo svg {
+	width: 20px;
+	height: 20px;
+	stroke: var(--interactive-accent, #bb9f6f);
+	stroke-width: 2;
+	fill: none;
+}
+
+.avm-donate-content {
+	flex: 1 1 auto;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+
+.avm-donate-title {
+	margin: 0;
+	font-size: 0.92rem;
+	font-weight: 600;
+	color: var(--interactive-accent, #bb9f6f);
+	line-height: 1.3;
+}
+
+.avm-donate-desc {
+	margin: 0;
+	font-size: 0.81rem;
+	color: var(--text-muted);
+	line-height: 1.45;
+}
+
+.avm-btn-donate {
+	background: var(--interactive-accent, #bb9f6f) !important;
+	border: 1px solid var(--interactive-accent, #bb9f6f) !important;
+	color: var(--text-on-accent, #1e1e20) !important;
+	font-weight: 600 !important;
+	font-size: 12px !important;
+	height: 36px !important;
+	padding: 0 18px !important;
+	border-radius: var(--avm-ctl-radius, 8px) !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	gap: 8px !important;
+	text-decoration: none !important;
+	white-space: nowrap !important;
+	flex-shrink: 0 !important;
+	cursor: pointer !important;
+	transition: opacity 0.15s ease, transform 0.1s ease !important;
+}
+
+.avm-btn-donate:hover {
+	opacity: 0.92 !important;
+}
+
+.avm-btn-donate:active {
+	transform: scale(0.98) !important;
+}
+
+.avm-btn-donate svg {
+	width: 14px !important;
+	height: 14px !important;
+	stroke: var(--text-on-accent, #1e1e20) !important;
+	stroke-width: 2.2 !important;
+}
+
+/* ── Modal Add Repo: Clean Obsidian Standard ────────────────── */
+.avm-nexus-modal {
+	padding: 0 4px;
+}
+
+.avm-nexus-modal-header {
+	margin-bottom: 14px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.avm-nexus-modal-title {
+	margin: 0 0 6px 0;
+	font-size: 1.15rem;
+	font-weight: 600;
+	color: var(--text-normal);
+}
+
+.avm-nexus-modal-desc {
+	margin: 0;
+	color: var(--text-muted);
+	font-size: 0.84rem;
+	line-height: 1.45;
+}
+
+.avm-nexus-modal .setting-item {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 10px;
+	border: none;
+	padding: 4px 0 0 0;
+}
+
+.avm-nexus-modal .setting-item-info {
+	margin: 0;
+	padding: 0;
+}
+
+.avm-nexus-modal .setting-item-name {
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: var(--text-normal);
+	margin-bottom: 2px;
+}
+
+.avm-nexus-modal .setting-item-description {
+	font-size: 0.82rem;
+	color: var(--text-muted);
+	line-height: 1.4;
+}
+
+.avm-nexus-modal .setting-item-control {
+	width: 100%;
+	margin-top: 4px;
+}
+
+.avm-nexus-input-full {
+	width: 100% !important;
+	box-sizing: border-box;
+	height: 38px !important;
+	padding: 0 12px !important;
+	font-size: 13px !important;
+	border-radius: var(--avm-ctl-radius, 8px) !important;
+	border: 1px solid var(--background-modifier-border) !important;
+	background: var(--background-primary) !important;
+	color: var(--text-normal) !important;
+}
+
+.avm-nexus-input-full:focus {
+	border-color: var(--interactive-accent, #bb9f6f) !important;
+	box-shadow: none !important;
+}
+
+.avm-nexus-modal-status {
+	font-size: 12px;
+	margin: 12px 0 0 0;
+	color: var(--text-muted);
+	min-height: 18px;
+	line-height: 1.4;
+}
+
+.avm-nexus-modal-status.is-error {
+	color: #eb5757 !important;
+}
+
+.avm-nexus-modal-actions {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 10px;
+	margin-top: 22px;
+	padding-top: 14px;
+	border-top: 1px solid var(--background-modifier-border);
+}
+
+
+/* ── Refined Donate Banner (Strict Left Layout & Anti-drift) ── */
+.avm-donate-banner {
+	margin-top: 32px;
+	padding: 16px 20px;
+	background: var(--background-secondary);
+	border: 1px solid rgba(187, 159, 111, 0.3);
+	border-radius: var(--avm-card-radius, 8px);
+	box-sizing: border-box;
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	gap: 20px !important;
+	width: 100% !important;
+}
+
+.avm-donate-banner-left {
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	justify-content: flex-start !important;
+	gap: 16px !important;
+	flex: 1 1 auto !important;
+	min-width: 0 !important;
+	text-align: left !important;
+}
+
+.avm-donate-logo {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	width: 42px !important;
+	height: 42px !important;
+	border-radius: var(--avm-ctl-radius, 8px) !important;
+	background: rgba(187, 159, 111, 0.1) !important;
+	border: 1px solid rgba(187, 159, 111, 0.28) !important;
+	flex-shrink: 0 !important;
+}
+
+.avm-donate-logo svg {
+	width: 20px !important;
+	height: 20px !important;
+	stroke: var(--interactive-accent, #bb9f6f) !important;
+	stroke-width: 2 !important;
+	fill: none !important;
+}
+
+.avm-donate-content {
+	flex: 1 1 auto !important;
+	min-width: 0 !important;
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: flex-start !important;
+	justify-content: center !important;
+	gap: 4px !important;
+	text-align: left !important;
+}
+
+.avm-donate-title,
+.avm-donate-content h4,
+.avm-donate-content .avm-donate-title {
+	margin: 0 !important;
+	padding: 0 !important;
+	font-size: 0.96rem !important;
+	font-weight: 600 !important;
+	color: var(--text-normal) !important;
+	line-height: 1.3 !important;
+	text-align: left !important;
+	width: 100% !important;
+	display: block !important;
+}
+
+.avm-donate-desc,
+.avm-donate-content p,
+.avm-donate-content .avm-donate-desc {
+	margin: 0 !important;
+	padding: 0 !important;
+	font-size: 0.82rem !important;
+	color: var(--text-muted) !important;
+	line-height: 1.45 !important;
+	text-align: left !important;
+	width: 100% !important;
+	display: block !important;
+}
+
+.avm-btn-donate {
+	background: var(--interactive-accent, #bb9f6f) !important;
+	border: 1px solid var(--interactive-accent, #bb9f6f) !important;
+	color: var(--text-on-accent, #1e1e20) !important;
+	font-weight: 600 !important;
+	font-size: 12px !important;
+	height: 36px !important;
+	padding: 0 18px !important;
+	border-radius: var(--avm-ctl-radius, 8px) !important;
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	gap: 8px !important;
+	text-decoration: none !important;
+	white-space: nowrap !important;
+	flex-shrink: 0 !important;
+	cursor: pointer !important;
+	transition: opacity 0.15s ease, transform 0.1s ease !important;
+}
+
+.avm-btn-donate:hover {
+	opacity: 0.92 !important;
+}
+
+.avm-btn-donate:active {
+	transform: scale(0.98) !important;
+}
+
+.avm-btn-donate svg {
+	width: 14px !important;
+	height: 14px !important;
+	stroke: var(--text-on-accent, #1e1e20) !important;
+	stroke-width: 2.2 !important;
+}

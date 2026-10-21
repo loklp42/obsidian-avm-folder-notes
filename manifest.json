@@ -1,0 +1,9 @@
+{
+	"id": "obsidian-avm-folder-notes",
+	"name": "AVM Folder Notes",
+	"version": "1.0.0",
+	"minAppVersion": "1.4.0",
+	"description": "Folder notes and visual structure engine for Ave Maria ecosystem",
+	"author": "Ave Maria",
+	"isDesktopOnly": false
+}
